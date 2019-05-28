@@ -1,0 +1,17 @@
+[
+    {
+        "title": "title one",
+        "descricao": "blabla",
+        "preco": 1151
+    },
+    {
+        "title": "title two",
+        "descricao": "bleble",
+        "preco": 115145
+    },
+    {
+        "title": "title three",
+        "descricao": "haha",
+        "preco": 115471
+    }
+]
