@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +12,9 @@ ul {
 
 body{
     background-color: rgba(37, 42, 87, 0.938);
-    color: rgb(110, 115, 156);
+    color: rgb(90, 93, 121);
+    font-family: 'Varela Round', sans-serif;
+    font-size: 20px;
 }
 
 .title {
@@ -20,9 +24,10 @@ body{
 header {
     height: 10vh;
     display: flex;
-    justify-content: space-around;
-    background-color: rgba(37, 42, 87, 0.938);
+    justify-content: space-between;
+    background-color: rgba(51, 56, 98, 0.938);
     padding: 2%;
+    border-bottom: solid 1px rgba(69, 74, 110, 0.938);
 }
 
 nav{
@@ -34,8 +39,15 @@ nav ul {
 }
 
 input {
-    height: 25px;
+    height: 32px;
+    width: 280px;
+    background-color: transparent;
+    border: solid 2px rgba(69, 74, 110, 0.938);
+    padding: 12px;
+    border-radius: 6px;
+    outline: none;
 }
+
 button {
     height: 25px;
 }
@@ -47,12 +59,36 @@ button {
 .sideNav {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 2px;
+    align-items: flex-start;
+    padding: 25px;
     height: 100vh;
-    width: 16%;
+    width: 210px;
     background: rgba(30, 35, 78, 0.938);
     border-right: solid 1px rgba(50, 51, 87, 0.671);
+}
+
+.sideNav h4 {
+    margin-bottom: 15px;
+}
+
+.sideNav li {
+    margin-top: 6px;
+}
+
+select {
+    margin-top: 35px;
+    border: solid 2px #f8f2f2;
+    background-color: transparent;
+    color: #f8f2f2;
+    font-weight: bold;
+    padding: 6px;
+    border-radius: 6px;
+    outline: none;
+}
+
+select option {
+    background: rgba(37, 42, 87, 0.938);
+    border-radius: 6px;
 }
 
 .categories {

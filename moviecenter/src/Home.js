@@ -51,11 +51,11 @@ function Home() {
           </ul>
 
           <select name="select">
-            <option value="valor1">Valor 1</option>
-            <option value="valor2" selected>
+            <option>Valor 1</option>
+            <option selected>
               Release Year
             </option>
-            <option value="valor3">Valor 3</option>
+            <option>Valor 3</option>
           </select>
         </div>
       </div>
