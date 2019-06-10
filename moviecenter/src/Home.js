@@ -13,7 +13,7 @@ function Home() {
             </li>
           </ul>
           <input type="text" placeholder="Search a movie" />
-          <button>Search</button>
+          <button><i class="fas fa-search"></i></button>
         </nav>
       </header>
 

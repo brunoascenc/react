@@ -20,14 +20,14 @@ body{
 .title {
     color: #f8f2f2;
 }
-
+/*Header*/
 header {
     height: 10vh;
     display: flex;
     justify-content: space-between;
     background-color: rgba(51, 56, 98, 0.938);
     padding: 2%;
-    border-bottom: solid 1px rgba(69, 74, 110, 0.938);
+    border-bottom: solid 1px rgba(58, 62, 98, 0.938);
 }
 
 nav{
@@ -36,26 +36,42 @@ nav{
 
 nav ul {
     margin-right: 25px;
+    color: rgb(126, 129, 149);
+    text-transform: uppercase;
 }
 
 input {
     height: 32px;
     width: 280px;
-    background-color: transparent;
-    border: solid 2px rgba(69, 74, 110, 0.938);
+    background-color:rgba(75, 81, 128, 0.5);
+    border: none;
+    /* border: solid 2px rgba(102, 107, 149, 0.938); */
     padding: 12px;
-    border-radius: 6px;
+    border-radius: 26px;
     outline: none;
+    /* border-top: none;
+    border-right: none;
+    border-left: none; */
+    position: relative;
 }
 
 button {
+    cursor: pointer;
     height: 25px;
+    background: transparent;
+    font-size: 17px;
+    border: none;
+    color: rgb(156, 159, 180);
+    position: absolute;
+    right: 40px;
+    top: 32px;
 }
+
 
 .home {
     height: 100vh;
 }
-
+/*Side nav*/
 .sideNav {
     display: flex;
     flex-direction: column;
@@ -63,8 +79,8 @@ button {
     padding: 25px;
     height: 100vh;
     width: 210px;
-    background: rgba(30, 35, 78, 0.938);
-    border-right: solid 1px rgba(50, 51, 87, 0.671);
+    background: rgba(22, 26, 63, 0.938);
+    border-right: solid 1px rgba(58, 62, 98, 0.938);
 }
 
 .sideNav h4 {
@@ -76,10 +92,11 @@ button {
 }
 
 select {
+    cursor: pointer;
     margin-top: 35px;
-    border: solid 2px #f8f2f2;
+    border: solid 2px #4f557a;
     background-color: transparent;
-    color: #f8f2f2;
+    color: #8c91ac;
     font-weight: bold;
     padding: 6px;
     border-radius: 6px;
