@@ -3,47 +3,32 @@ import './App.css';
 import Search from './Search'
 
 class App extends Component {
-  constructor (props) {
-    super(props)
-    console.log('oi')
-
-    const movies = [
-      {id: 0, title: "asasas", overview:'ssss'},
-      {id: 2, title: "asasas", overview:'ssss'},
-      {id: 3, title: "asasas", overview:'ssss'},
-      {id: 4, title: "asasas", overview:'ssss'}
-    ]
-
-    var movieRows = []
-
-    movies.forEach((movie) => {
-      console.log(movie.id)
-      const movieRow = <table>
-        <tbody>
-          <tr>
-            <td>
-              <img src = ""/>
-            </td>
-            <td>
-              {movie.title}
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      movieRows.push(<p>movie title: {movie.title}</p>)
-    })
-
-    this.state = {rows: movieRows}
+  constructor(){
+    super()
+    this.state = {
+      movies: [],
+      searchTerm: ''
+    }
+    this.apiKey = process.env.REACT_APP_API
   }
 
-
-
+  handleSubmit = (e) => {
+    e.preventDefault()
+    fetch(`https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&query=${this.state.searchTerm}`)
+    .then(data => data.json())
+    .then(data => {
+      console.log(data)
+      this.setState({movies: [...data.results]})
+    })
+  }
+  
+  handleChange = (e) => {
+    this.setState({searchTerm: e.target.value})
+  }
   render() {
     return (
       <div className="App">
-        <Search/>
-
-      {this.state.rows}
+        <Search handleSubmit={this.handleSubmit} handleChange = {this.handleChange}/>
       </div>
     );
   }
