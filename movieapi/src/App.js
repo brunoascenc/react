@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import Search from './Search'
+import MovieList from './MovieList'
+
 
 class App extends Component {
   constructor(){
@@ -29,6 +31,7 @@ class App extends Component {
     return (
       <div className="App">
         <Search handleSubmit={this.handleSubmit} handleChange = {this.handleChange}/>
+        <MovieList movies = {this.state.movies}/>
       </div>
     );
   }
