@@ -15,6 +15,7 @@ body{
     color: rgb(90, 93, 121);
     font-family: 'Varela Round', sans-serif;
     font-size: 20px;
+    overflow-x: hidden;
 }
 
 .title {
@@ -53,6 +54,15 @@ input {
     border-right: none;
     border-left: none; */
     position: relative;
+}
+
+.movieList {
+    display: grid;
+    grid-template-columns: repeat(5, 240px);
+    margin: 20px;
+    grid-row-gap: 20px;
+    margin-left: 225px;
+    margin-top: -690px;
 }
 
 button {

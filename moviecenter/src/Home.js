@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-function Home() {
+function Home(props) {
   return (
     <div className="home">
       <header>
@@ -12,8 +12,16 @@ function Home() {
               <a>Login</a>
             </li>
           </ul>
-          <input type="text" placeholder="Search a movie" />
-          <button><i class="fas fa-search"></i></button>
+          <form onSubmit={props.handleSubmit}>
+            <input
+              type="text"
+              placeholder="Search a movie"
+              onChange={props.handleChange}
+            />
+            <button onSubmit={props.handleSubmit}>
+              <i class="fas fa-search" />
+            </button>
+          </form>
         </nav>
       </header>
 
@@ -49,15 +57,15 @@ function Home() {
               <a>Fantasy</a>
             </li>
           </ul>
-
+          
           <select name="select">
             <option>Valor 1</option>
-            <option selected>
-              Release Year
-            </option>
+            <option selected>Release Year</option>
             <option>Valor 3</option>
           </select>
         </div>
+
+        <div />
       </div>
     </div>
   );
