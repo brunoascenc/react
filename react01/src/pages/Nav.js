@@ -2,14 +2,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Nav.css';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSmileWink } from '@fortawesome/free-solid-svg-icons';
+
 export default function Nav() {
   return (
     <div className="nav">
-      
-      <div className="Logo">
-        <Link to="/">
-          <h1>Pat Salgados</h1>
-        </Link>
+      <div className="logo">
+        <div>
+          <FontAwesomeIcon icon={faSmileWink} />
+          <Link to="/">
+            <h1>Pat Salgados</h1>
+          </Link>
+        </div>
       </div>
 
       <nav>
@@ -28,7 +33,6 @@ export default function Nav() {
           </Link>
         </ul>
       </nav>
-
     </div>
   );
 }

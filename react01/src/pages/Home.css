@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Graduate&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lexend+Exa&display=swap');
 
 header{
   height: 100vh;
@@ -18,21 +20,28 @@ header img {
   flex-direction: column;
   align-items: center;
   color: rgb(244, 246, 248);
+  background: rgb(226, 182, 87);
+  width: 40%;
 }
 
 .landing-content div {
-  /* background: linear-gradient(rgba(218, 233, 82, 0.3), rgba(197, 240, 79, 0.3)); */
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 55px;
   padding: 3%;
+}
+
+.landing-content div p {
+  font-family: 'Lexend Exa', sans-serif;
+  font-weight: 100;
+  font-size: 0.9rem;
+  color: rgb(248, 249, 250);
 }
 
 
 .landing-content h1 {
-  font-size: 7rem;
-  /* text-transform: uppercase; */
-  /* border-bottom: solid 1px white; */
+  font-size: 2rem;
   font-family: 'Dancing Script', cursive;
   font-weight: 100;
 }
@@ -40,34 +49,50 @@ header img {
 .landing-content h3 {
   font-size: 2rem;
   text-transform: uppercase;
+  font-family: 'Graduate', cursive;
+  font-weight: 100;
+  letter-spacing: 6px;
 }
 
 .social-icons {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  /* justify-content: flex-end; */
   color: white;
   padding: 16px;
 }
+
 .social-icons div {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
+.social-icons div a {
+  color: rgb(225, 225, 226);
+}
+
+.social-icons div a:hover {
+  transform: translateX(-7px);
+  transition: all 0.2s ease-in-out;
+  color: rgb(245, 214, 147);
+}
+
 footer {
   display: flex;
   align-items: flex-end;
-  padding: 14px;
+  padding: 10px 5%;
+
 }
 
 footer p {
   color: white;
   font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 1.1rem;
+  letter-spacing: 4px;
+  font-size: 0.9rem;
+  font-family: 'Graduate', cursive;
+  font-weight: 100;
 }
 
 
