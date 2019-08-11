@@ -1,8 +1,10 @@
 import React from 'react';
-import Nav from './Nav';
+import {Link} from 'react-router-dom';
+
 import './Home.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSmileWink } from '@fortawesome/free-solid-svg-icons';
+
 import {
   faFacebookF,
   faInstagram,
@@ -14,7 +16,39 @@ export default function Home() {
   return (
     <div className="home-container">
       <header className="landing-page">
-        <Nav />
+
+      <div className="nav-home">
+      <div className="logo-home">
+        <div>
+          <FontAwesomeIcon icon={faSmileWink} />
+          <Link to="/">
+            <h1>Pat Salgados</h1>
+          </Link>
+        </div>
+      </div>
+
+      <nav>
+        <ul>
+          <Link to="/">
+            <li>Home</li>
+          </Link>
+          <Link to="/menu">
+            <li>Menu</li>
+          </Link>
+          <Link to="/contato">
+            <li>Contato</li>
+          </Link>
+          <Link to="/sobre">
+            <li>Sobre</li>
+          </Link>
+        </ul>
+      </nav>
+    </div>
+      
+      
+
+
+
         <div className="landing-content">
           <div>
             {/* <FontAwesomeIcon icon={faSmileWink} size="3x" />
@@ -55,7 +89,7 @@ export default function Home() {
           </div>
         </div>
 
-        <footer>
+        <footer className = "home-footer">
           <p>AV. Paulista, São Paulo - SP, 101</p>
         </footer>
       </header>

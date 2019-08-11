@@ -10,7 +10,7 @@ export default function Nav() {
     <div className="nav">
       <div className="logo">
         <div>
-          <FontAwesomeIcon icon={faSmileWink} />
+          <FontAwesomeIcon icon={faSmileWink} color ="rgb(233, 147, 49)" />
           <Link to="/">
             <h1>Pat Salgados</h1>
           </Link>
