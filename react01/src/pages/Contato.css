@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+
+
+.contato-form{ 
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+
+.contato-form input {
+    padding: 10px;
+    border-radius: 2px;
+    border: solid 1px #ccc;
+    margin-top: 5px;
+    margin-bottom: 7px;
+}
+
+.contato-form label {
+    font-family: 'Raleway', sans-serif;
+    color: rgb(121, 122, 122);
+}
+
+.contato-form select {
+    color: rgb(121, 122, 122);
+    width: 25%;
+    padding: 4px;
+    margin-bottom: 8px;
+}
+
+.contato-form select, textarea {
+    border: solid 1px #ccc;
+    border-radius: 2px;
+}
+
+.contato-form button {
+    width: 25%;
+    margin-top: 7px;
+    padding: 7px;
+    background: transparent;
+    border: solid 2px rgb(224, 152, 68);
+    border-radius: 16px;
+    color: rgb(224, 152, 68);
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.contato-form button:hover{
+    background: rgb(224, 152, 68);
+    color: rgb(243, 240, 240);
+    transition: all 0.1s ease-in-out;
+}
+
+.options-span {
+    font-family: 'Raleway', sans-serif;
+    color: rgb(142, 143, 143);
+    font-size: 13px;
+    padding: 6px;
+}
+
+.contato {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 6%;
+    border-top: solid 1px rgb(246, 229, 191);
+    padding: 3% 0 0 0 ;
+}
+
+.contato img {
+    max-width: 100%;
+}
+
+.contato-form form {
+    display: flex;
+    flex-direction: column;
+    padding: 6%;
+}
+
+.contato-form form div {
+    display: flex;
+    margin-bottom: 2px;
+}
+
+.contato-form form div .input-nome {
+    display: flex;
+    flex-direction: column;
+}
+
+.contato-form form div .input-sobrenome {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+}
+
+.contato-form form div .input-nome, .input-sobrenome input {
+    width: 280px;
+}

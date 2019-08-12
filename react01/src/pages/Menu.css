@@ -1,10 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Graduate&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+h2 {
+    font-family: 'Merriweather', serif;
+    text-transform: capitalize;
+    color: rgb(233, 147, 49);
+    align-self: center;
+    letter-spacing: -1px;
+    font-weight: bold;
+    font-size: 28px;
+}
+
 .menu-title {
     display: flex;
     justify-content: center;
     margin-top: 5%;
     margin-bottom: 5%;
-    border-bottom: solid 1px rgb(245, 214, 147);
+    border-bottom: solid 1px rgb(246, 226, 182);
     padding: 0 0 26px 0;
+}
+
+.menu-title h2 {
+    font-family: 'Merriweather', serif;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 29px;
+    color: rgb(233, 147, 49);
+    letter-spacing: -1px;
 }
 
 .menu-banner {
@@ -15,8 +38,9 @@
 }
 
 .menu {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    /* grid-template-columns: repeat(2, 1fr); */
+    justify-content: center;
 }
 
 .menu img {
@@ -26,11 +50,13 @@
 .menu-salgados {
     display: flex;
     flex-direction: column;
+    padding: 6%;
 }
 
 .menu-lanches {
     display: flex;
     flex-direction: column;
+    padding: 6%;
 }
 
 .detalhes{
@@ -49,6 +75,18 @@
 
 .detalhes div h4 {
     margin-bottom: 15px;
+    font-family: 'Graduate', cursive;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgb(224, 152, 68);
+}
+
+.detalhes div p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    text-transform: lowercase;
+    color: rgb(121, 122, 122);
+    font-weight: 100;
 }
 
 .menu-footer {
@@ -56,10 +94,15 @@
     flex-direction: column;
     align-items: center;
     padding: 45px 0  145px 0;
-    border-top: solid 1px rgb(245, 214, 147);
+    border-top: solid 1px rgb(238, 214, 162);
 }
 
 .logo-footer {
     margin-bottom: 35px;
     color: rgb(233, 147, 49);
+}
+
+.descricao {
+    word-wrap: break-word;
+    width: 260px;
 }

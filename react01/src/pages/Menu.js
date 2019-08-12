@@ -26,7 +26,7 @@ export default function Home() {
         </div>
 
         <div className="menu-title">
-          <h2>Veja o nosso menu</h2>
+          <h2>Veja O Nosso menu</h2>
         </div>
 
         <div className="menu">
@@ -37,6 +37,12 @@ export default function Home() {
               <img src={coxinha} alt="Coxinhas" />
               <div>
                 <h4>Coxinha</h4>
+                <span className="descricao">
+                  <p>
+                    frango desfiado, cebolas médias picadas, salsinha picada e
+                    sal
+                  </p>
+                </span>
               </div>
             </div>
 
@@ -44,6 +50,13 @@ export default function Home() {
               <img src={kibe} alt="Kibe" />
               <div>
                 <h4>Kibe</h4>
+                <span className="descricao">
+                  <p>
+                    carne bovina magra moída, folhas de louro, pimenta-do-reino,
+                    dentes de alho bem picados, cebola grande em cubinhos e
+                    salsinha picada
+                  </p>
+                </span>
               </div>
             </div>
 
@@ -51,6 +64,11 @@ export default function Home() {
               <img src={bolinha} alt="Bolinha" />
               <div>
                 <h4>Bolinha de queijo</h4>
+                <span className="descricao">
+                  <p>
+                   mussarela em cubinhos, salsa picada, folhas de manjericão fresco picado e sal
+                  </p>
+                </span>
               </div>
             </div>
           </div>
@@ -102,9 +120,9 @@ export default function Home() {
           </div>
         </div>
 
-        <footer className = "menu-footer">
+        <footer className="menu-footer">
           <div className="logo-footer">
-            <FontAwesomeIcon icon={faSmileWink} size = "2x" />
+            <FontAwesomeIcon icon={faSmileWink} size="2x" />
           </div>
 
           <nav className="footerNav">
