@@ -1,0 +1,76 @@
+
+.sobre img {
+    max-width: 100%;
+    border-radius: 6px;
+}
+
+.sobre {
+    display: grid;
+    grid-template-columns: repeat(2, 600px);
+    margin-top: 8%;
+    margin-bottom: 5%;
+    border-top: solid 1px rgb(246, 229, 191);
+    padding: 3% 0 0 0 ;
+    justify-content: center;
+}
+
+.sobre .sobre-texto p {
+    font-family: 'Raleway', sans-serif;
+    color:  #8f8e8e;
+    letter-spacing: 1.5px;
+    text-align: start;
+}
+
+.sobre .sobre-texto  {
+    display: flex;
+    flex-direction: column;
+    align-items:  center;
+}
+
+.sobre .sobre-texto h1 {
+    margin-bottom: 15px;
+    font-family: 'Merriweather', serif;
+    color: rgb(238, 137, 69);
+}
+
+.sobre .sobre-texto .destaque p {
+    color: rgb(233, 120, 45);
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    width: 550px;
+    text-align: center;
+    letter-spacing: 0;
+}
+
+.mapa, .funcionamento {
+    margin-top: 55px;
+}
+
+.funcionamento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 120px;
+}
+
+.funcionamento h2 {
+    text-transform: uppercase;
+}
+
+.funcionamento a {
+    text-decoration: none;
+    color: rgb(206, 129, 77);
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    /* padding: 8px; */
+    border-bottom: solid 1px rgb(248, 173, 124);
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.funcionamento p {
+    color: #8f8e8e;
+    font-family: 'Raleway', sans-serif;
+}

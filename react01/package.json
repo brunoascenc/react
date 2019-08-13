@@ -7,10 +7,15 @@
     "@fortawesome/free-brands-svg-icons": "^5.10.1",
     "@fortawesome/free-solid-svg-icons": "^5.10.1",
     "@fortawesome/react-fontawesome": "^0.1.4",
-    "react": "^16.8.6",
+    "google-map-react": "^1.1.4",
+    "google-maps": "^3.3.0",
+    "pigeon-maps": "^0.13.0",
+    "react": "^16.9.0",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "react-slick": "^0.25.2",
+    "slick-carousel": "^1.8.1"
   },
   "scripts": {
     "start": "react-scripts start",

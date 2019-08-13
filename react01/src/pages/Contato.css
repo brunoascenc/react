@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 
-
-
 .contato-form{ 
     display: flex;
     flex-direction: column;
@@ -69,6 +67,8 @@
 
 .contato img {
     max-width: 100%;
+    border-radius: 6px;
+    /* border: solid 3px rgba(235, 161, 78, 0.445); */
 }
 
 .contato-form form {
