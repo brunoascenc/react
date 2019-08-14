@@ -1,35 +1,44 @@
-import React, { Component } from 'react';
-import GoogleMapReact from 'google-map-react';
+import React from 'react'
+import { Map as LeafletMap, TileLayer, Marker, Popup } from 'react-leaflet';
 
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
-
-class SimpleMap extends Component {
-  static defaultProps = {
-    center: {
-      lat: 59.95,
-      lng: 30.33
-    },
-    zoom: 11
-  };
-
+class Map extends React.Component {
   render() {
     return (
-      // Important! Always set the container height explicitly
-      <div style={{ height: '650px', width: '100%' }}>
-        <GoogleMapReact
-          bootstrapURLKeys={{ key: 'AIzaSyCZmrB7zTZLED4jBnWXO8200yw8SfgVrdQ' }}
-          defaultCenter={this.props.center}
-          defaultZoom={this.props.zoom}
-        >
-          <AnyReactComponent
-            lat={59.955413}
-            lng={30.337844}
-            text="My Marker"
-          />
-        </GoogleMapReact>
-      </div>
+      <LeafletMap
+        center={[-23.5489, -46.6388]}
+        zoom={12}
+        maxZoom={18}
+        attributionControl={true}
+        zoomControl={true}
+        doubleClickZoom={true}
+        scrollWheelZoom={true}
+        dragging={true}
+        animate={true}
+        easeLinearity={0.35}
+      >
+        <TileLayer
+          url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
+        />
+        <Marker position={[-23.5629, -46.6544]}>
+          <Popup>
+            Pat Salgados - SP AV.Paulista 
+          </Popup>
+        </Marker>
+
+        <Marker position={[-23.56, -46.6327]}>
+          <Popup>
+            Pat Salgados - SP Liberdade 
+          </Popup>
+        </Marker>
+
+        <Marker position={[-22.970722, -43.182365]}>
+          <Popup>
+            Pat Salgados - RJ Copacabana
+          </Popup>
+        </Marker>
+      </LeafletMap>
     );
   }
 }
 
-export default SimpleMap
+export default Map

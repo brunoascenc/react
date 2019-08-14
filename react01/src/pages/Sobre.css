@@ -4,6 +4,11 @@
     border-radius: 6px;
 }
 
+.leaflet-container {
+    height: 650px;
+    width: 100%;
+}
+
 .sobre {
     display: grid;
     grid-template-columns: repeat(2, 600px);
@@ -30,11 +35,11 @@
 .sobre .sobre-texto h1 {
     margin-bottom: 15px;
     font-family: 'Merriweather', serif;
-    color: rgb(238, 137, 69);
+    color: rgb(243, 120, 39);
 }
 
 .sobre .sobre-texto .destaque p {
-    color: rgb(233, 120, 45);
+    color: rgb(241, 135, 65);
     font-family: 'Merriweather', serif;
     font-weight: bold;
     font-size: 1.5rem;

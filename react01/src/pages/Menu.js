@@ -3,9 +3,6 @@ import Nav from './Nav';
 import './Menu.css';
 import { Link } from 'react-router-dom';
 
-// import "~slick-carousel/slick/slick.css"; 
-// import "~slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSmileWink } from '@fortawesome/free-solid-svg-icons';
@@ -18,8 +15,8 @@ import xsalada from '../assets/xsalada.jpg';
 import xtudo from '../assets/xtudo.jpg';
 import xbacon from '../assets/xbacon.jpg';
 import xburguer from '../assets/xburguer.jpg';
-// import salgados from '../assets/salgados1.jpg';
-// import lanches from '../assets/lanches.jpg';
+import salgados from '../assets/coxinhaswpp.jpg';
+import lanches from '../assets/cheeseburgerwpp.jpg';
 
 export default function Home() {
   return (
@@ -28,8 +25,8 @@ export default function Home() {
         <Nav />
 
         <div className="menu-banner">
-              <img src = "https://portal-amb-imgs.clubedaana.com.br/2019/04/coxinha-de-frango-da-palmirinha-1920x1080.jpg" alt = "Coxinhas"/>
-            <img src = "http://infodiario.co.mz/app/webroot/js/kcfinder/uploads/201503/images/cheeseburger.jpg" alt = "Lanches"/>
+            <img src = {salgados} alt = "Coxinhas"/>
+              <img src = {lanches} alt = "Lanches"/>
             {/* <div>
               <h3>3</h3>
             </div>

@@ -44,35 +44,31 @@ export default function Sobre() {
           </div>
 
           <div className="mapa">
-          <Map />
+            <Map />
+          </div>
+
+          <div class="funcionamento">
+            <h2>Pat Salgados - SP</h2>
+            <a href="#"> AV.Paulista - 123 </a>
+            <p>Seg – Sexta 10am até 18pm</p>
+            <p>Sab – Dom 10am até 14pm</p>
+            <p>TEL – (11) 1234-5678</p>
+            <br />
+
+            <h2>Pat Salgados - SP</h2>
+            <a href="#"> Rua da glória - 123 </a>
+            <p>Seg – Sexta 10am até 18pm</p>
+            <p>Sab – Dom 10am até 14pm</p>
+            <p>TEL – (11) 1234-5678</p>
+            <br />
+
+            <h2>Pat Salgados - RJ</h2>
+            <a href="#"> Copacabana - 123 </a>
+            <p>Seg – Sexta 10am até 18pm</p>
+            <p>Sab – Dom 10am até 14pm</p>
+            <p>TEL – (21) 1234-5678</p>
+          </div>
         </div>
-
-        <div class ="funcionamento">
-
-          <h2>Pat Salgados - SP</h2>
-          <a href = "#"> AV.Paulista - 123 </a>
-          <p>Seg – Sexta 10am até 18pm</p>
-          <p>Sab – Dom 10am até 14pm</p>
-          <p>TEL – (11) 1234-5678</p>
-          <br></br>
-
-          <h2>Pat Salgados - SP</h2>
-          <a href = "#"> AV.Liberdade - 123 </a>
-          <p>Seg – Sexta 10am até 18pm</p>
-          <p>Sab – Dom 10am até 14pm</p>
-          <p>TEL – (11) 1234-5678</p>
-          <br></br>
-
-          <h2>Pat Salgados - RJ</h2>
-          <a href = "#"> Copacabana - 123 </a>
-          <p>Seg – Sexta 10am até 18pm</p>
-          <p>Sab – Dom 10am até 14pm</p>
-          <p>TEL – (21) 1234-5678</p>
-          
-        </div>
-        </div>
-
-       
 
         <footer className="menu-footer">
           <div className="logo-footer">

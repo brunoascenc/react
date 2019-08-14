@@ -23,11 +23,11 @@ export default function Contato() {
             <h2>Entre em contato</h2>
             <form>
               <div>
-                <div className = "input-nome">
+                <div className="input-nome">
                   <label for="nome">Nome *</label>
                   <input type="text" name="nome" placeholder="Nome" />
                 </div>
-                <div className = "input-sobrenome">
+                <div className="input-sobrenome">
                   <label for="nome">Sobrenome *</label>
                   <input type="text" name="sobrenome" placeholder="Sobrenome" />
                 </div>
@@ -37,7 +37,10 @@ export default function Contato() {
               <input type="email" name="email" />
 
               <label for="duvidas">Selecione *</label>
-              <span className = "options-span"> Entregamos somente na região de SP</span>
+              <span className="options-span">
+                {' '}
+                Entregamos somente na região de SP
+              </span>
               <select name="duvidas">
                 <option value="encomenda">Encomendas</option>
                 <option value="horarios">Funcionamento</option>
@@ -47,7 +50,7 @@ export default function Contato() {
               <label for="detalhes">Detalhes *</label>
               <textarea rows="5" cols="50" name="detalhes" />
 
-              <button>Enviar</button>
+              <button type="submit">Enviar</button>
             </form>
           </div>
         </div>
