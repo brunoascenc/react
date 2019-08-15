@@ -26,7 +26,9 @@ export default function Home() {
 
         <div className="menu-banner">
             <img src = {salgados} alt = "Coxinhas"/>
-              <img src = {lanches} alt = "Lanches"/>
+  
+            <img src = {lanches} alt = "Lanches"/>
+            
             {/* <div>
               <h3>3</h3>
             </div>

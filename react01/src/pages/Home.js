@@ -71,19 +71,16 @@ export default function Home() {
 
         <div className="social-icons">
           <div>
-            <a href="#">
+            <a href="http://facebook.com">
               <FontAwesomeIcon icon={faFacebookF} size="2x" />
             </a>
-            <br />
-            <a href="#">
+            <a href="http://instagram.com">
               <FontAwesomeIcon icon={faInstagram} size="2x" />
             </a>
-            <br />
-            <a href="#">
+            <a href="http://twitter.com">
               <FontAwesomeIcon icon={faTwitter} size="2x" />
             </a>
-            <br />
-            <a href="#">
+            <a href="http://youtube.com">
               <FontAwesomeIcon icon={faYoutube} size="2x" />
             </a>
           </div>

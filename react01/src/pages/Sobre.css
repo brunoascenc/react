@@ -1,81 +1,131 @@
-
 .sobre img {
-    max-width: 100%;
-    border-radius: 6px;
+  max-width: 100%;
+  border-radius: 6px;
 }
 
 .leaflet-container {
-    height: 650px;
-    width: 100%;
+  height: 650px;
+  width: 100%;
 }
 
 .sobre {
-    display: grid;
-    grid-template-columns: repeat(2, 600px);
-    margin-top: 8%;
-    margin-bottom: 5%;
-    border-top: solid 1px rgb(246, 229, 191);
-    padding: 3% 0 0 0 ;
-    justify-content: center;
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(320px, 620px)); */
+  grid-template-columns: repeat(2, 600px);
+  margin-top: 8%;
+  grid-gap: 1em;
+  margin-bottom: 5%;
+  height: 100%;
+  border-top: solid 1px rgb(246, 229, 191);
+  padding: 3% 0 0 0;
+  justify-content: center;
 }
 
 .sobre .sobre-texto p {
-    font-family: 'Raleway', sans-serif;
-    color:  #8f8e8e;
-    letter-spacing: 1.5px;
-    text-align: start;
+  font-family: 'Raleway', sans-serif;
+  color: #8f8e8e;
+  letter-spacing: 1.5px;
+  text-align: start;
 }
 
-.sobre .sobre-texto  {
-    display: flex;
-    flex-direction: column;
-    align-items:  center;
+.sobre .sobre-texto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .sobre .sobre-texto h1 {
-    margin-bottom: 15px;
-    font-family: 'Merriweather', serif;
-    color: rgb(243, 120, 39);
+  margin-bottom: 15px;
+  font-family: 'Merriweather', serif;
+  color: rgb(243, 120, 39);
 }
 
 .sobre .sobre-texto .destaque p {
-    color: rgb(241, 135, 65);
-    font-family: 'Merriweather', serif;
-    font-weight: bold;
-    font-size: 1.5rem;
-    margin-bottom: 25px;
-    width: 550px;
-    text-align: center;
-    letter-spacing: 0;
+  color: rgb(241, 135, 65);
+  font-family: 'Merriweather', serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+  width: 550px;
+  text-align: center;
+  letter-spacing: 0;
 }
 
-.mapa, .funcionamento {
-    margin-top: 55px;
+.mapa,
+.funcionamento {
+  margin-top: 55px;
+  margin-bottom: 5%;
+}
+
+.mapa {
+  width: 100%;
 }
 
 .funcionamento {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 120px;
 }
 
 .funcionamento h2 {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .funcionamento a {
-    text-decoration: none;
-    color: rgb(206, 129, 77);
-    font-family: 'Raleway', sans-serif;
-    text-transform: uppercase;
-    /* padding: 8px; */
-    border-bottom: solid 1px rgb(248, 173, 124);
-    margin-top: 10px;
-    margin-bottom: 15px;
+  text-decoration: none;
+  color: rgb(206, 129, 77);
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  /* padding: 8px; */
+  border-bottom: solid 1px rgb(248, 173, 124);
+  margin-top: 10px;
+  margin-bottom: 15px;
 }
 
 .funcionamento p {
-    color: #8f8e8e;
-    font-family: 'Raleway', sans-serif;
+  color: #8f8e8e;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Media Queries */
+
+@media (max-width: 1390px) {
+  .sobre {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 620px));
+  }
+
+  .sobre .sobre-texto .destaque p {
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .menu-footer nav ul li {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 320px) {
+  .sobre .sobre-texto .destaque p {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 12px;
+  }
+
+  .sobre .sobre-texto p {
+    padding: 12px;
+  }
+
+  .leaflet-container {
+    height: 500px;
+  }
+
+  .mapa {
+    padding: 12px;
+  }
+
+  .sobre img {
+    padding: 12px;
+  }
 }

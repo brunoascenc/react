@@ -53,3 +53,48 @@ nav ul li {
   font-size: 0.9rem;
   font-weight: 100;
 }
+
+.show-menu-btn, .hide-menu-btn{
+  transition: 0.4s;
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+#check{
+  position: absolute;
+  visibility: hidden;
+  z-index: -1111;
+}
+
+
+@media (max-width: 800px){
+  .show-menu-btn, .hide-menu-btn{
+    display: block;
+  }
+
+  nav {
+    position: fixed;
+    width: 60% !important;
+    height: 100%;
+    background: #f5f3f3;
+    right: -100%;
+    top: 0;
+    transition: 0.7s;
+    z-index: 1;
+  }
+    /* nav ul {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    } */
+
+    .hide-menu-btn{
+      position: absolute;
+      top: 40px;
+      right: 40px;
+      color: rgb(100, 98, 98) !important;
+    }
+  
+
+}

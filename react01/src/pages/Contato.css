@@ -1,102 +1,134 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 
-.contato-form{ 
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 100px;
-    width: 650px;
-    height: 650px;
+.contato-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+  width: 650px;
+  height: 650px;
 }
 
 .contato-form input {
-    padding: 10px;
-    border-radius: 2px;
-    border: solid 1px #ccc;
-    margin-top: 5px;
-    margin-bottom: 7px;
-    /* width: 250px; */
+  padding: 10px;
+  border-radius: 2px;
+  border: solid 1px #ccc;
+  margin-top: 5px;
+  margin-bottom: 7px;
+  /* width: 250px; */
 }
 
 .contato-form label {
-    font-family: 'Raleway', sans-serif;
-    color: rgb(121, 122, 122);
+  font-family: 'Raleway', sans-serif;
+  color: rgb(121, 122, 122);
 }
 
 .contato-form select {
-    color: rgb(121, 122, 122);
-    width: 25%;
-    padding: 4px;
-    margin-bottom: 8px;
+  color: rgb(121, 122, 122);
+  width: 25%;
+  padding: 4px;
+  margin-bottom: 8px;
 }
 
-.contato-form select, textarea {
-    border: solid 1px #ccc;
-    border-radius: 2px;
+.contato-form select,
+textarea {
+  border: solid 1px #ccc;
+  border-radius: 2px;
 }
 
 .contato-form button {
-    width: 150px;
-    margin-top: 7px;
-    padding: 7px;
-    background: transparent;
-    border: solid 2px rgb(224, 152, 68);
-    border-radius: 16px;
-    color: rgb(224, 152, 68);
-    cursor: pointer;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+  width: 150px;
+  margin-top: 7px;
+  padding: 7px;
+  background: transparent;
+  border: solid 2px rgb(224, 152, 68);
+  border-radius: 16px;
+  color: rgb(224, 152, 68);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-.contato-form button:hover{
-    background: rgb(224, 152, 68);
-    color: rgb(243, 240, 240);
-    transition: all 0.1s ease-in-out;
+.contato-form button:hover {
+  background: rgb(224, 152, 68);
+  color: rgb(243, 240, 240);
+  transition: all 0.1s ease-in-out;
 }
 
 .options-span {
-    font-family: 'Raleway', sans-serif;
-    color: rgb(142, 143, 143);
-    font-size: 13px;
-    padding: 6px;
+  font-family: 'Raleway', sans-serif;
+  color: rgb(142, 143, 143);
+  font-size: 13px;
+  padding: 6px;
 }
 
 .contato {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin-top: 6%;
-    border-top: solid 1px rgb(246, 229, 191);
-    padding: 3% 0 0 0 ;
-    /* align-items: center; */
-    justify-content: center;
+  display: grid;
+  /* grid-template-columns: repeat(2, 620px); */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 620px));
+  margin-top: 6%;
+  border-top: solid 1px rgb(246, 229, 191);
+  padding: 3% 0 0 0;
+  /* align-items: center; */
+  justify-content: center;
 }
 
 .contato img {
-    max-width: 100%;
-    border-radius: 6px;
+  max-width: 100%;
+  border-radius: 6px;
 }
 
 .contato-form form {
-    display: flex;
-    flex-direction: column;
-    padding: 6%;
+  display: flex;
+  flex-direction: column;
+  padding: 6%;
 }
 
 .contato-form form div {
-    display: flex;
-    margin-bottom: 2px;
+  display: flex;
+  margin-bottom: 2px;
 }
 
 .contato-form form div .input-nome {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .contato-form form div .input-sobrenome {
-    display: flex;
-    flex-direction: column;
-    margin-left: 5%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
 }
 
-.contato-form form div .input-nome, .input-sobrenome input {
-    width: 280px;
+.contato-form form div .input-nome,
+.input-sobrenome input {
+  width: 280px;
+}
+
+@media (max-width: 1360px) {
+  .contato-form {
+    width: 100%;
+    height: 100%;
+    margin-top: 7%;
+  }
+}
+
+@media (max-width: 630px) {
+  .contato-form form div {
+    flex-direction: column;
+  }
+
+  .contato-form form div .input-sobrenome {
+    margin-left: 0%;
+  }
+
+  .contato-form form div .input-nome,
+  .input-sobrenome input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 320px) {
+  .contato img {
+    padding: 12px;
+  }
 }

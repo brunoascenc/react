@@ -71,7 +71,6 @@ header img {
 }
 
 
-
 .landing-content{
   display: flex;
   flex-direction: column;
@@ -81,7 +80,7 @@ header img {
   width: 40%;
   border-radius: 0 12px 12px 0;
 }
-
+  
 .landing-content div {
   display: flex;
   flex-direction: column;
@@ -95,7 +94,7 @@ header img {
   font-weight: 100;
   font-size: 0.9rem;
   color: rgb(248, 249, 250);
-  max-width: 100%;
+  width: 100%;
   word-wrap: break-word;
 }
 
@@ -118,7 +117,7 @@ header img {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  color: white;
+  color: rgb(251, 250, 250);
   padding: 16px;
 }
 
@@ -130,6 +129,7 @@ header img {
 
 .social-icons div a {
   color: rgb(225, 225, 226);
+  padding: 5px;
 }
 
 .social-icons div a:hover {
@@ -164,3 +164,30 @@ header img {
   margin-bottom: auto;
   margin-top: auto;
 } */
+
+
+@media (max-width: 920px){
+  .landing-content{
+    width: 60%;
+  }
+}
+
+
+@media (max-width: 530px){
+  .landing-content{
+    width: 80%;
+  }
+
+  .landing-content div p {
+    max-width: 100%;
+  }
+
+  .social-icons {
+    align-items: flex-start;
+    margin-top: 25px;
+  }
+
+  header{
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('http://voopropaganda.com.br/wp-content/uploads/2018/12/foto-coxinha.jpg') center;
+  }
+} 
