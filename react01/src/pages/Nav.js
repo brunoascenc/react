@@ -23,7 +23,7 @@ export default function Nav() {
 
       <input type="checkbox" id="check" />
       <label htmlFor="check" className="show-menu-btn">
-        <FontAwesomeIcon icon={faBars} color="rgb(233, 147, 49)" />
+        <FontAwesomeIcon className = "show-icon" icon={faBars} color="rgb(233, 147, 49)" />
       </label>
       <nav>
         <ul>
@@ -42,7 +42,7 @@ export default function Nav() {
         </ul>
 
         <label htmlFor="check" className="hide-menu-btn">
-          <FontAwesomeIcon icon={faTimes} color="rgb(233, 147, 49)" />
+          <FontAwesomeIcon className="hide-icon"icon={faTimes} color="rgb(233, 147, 49)" />
         </label>
       </nav>
     </div>

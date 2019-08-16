@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 
 import './Home.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSmileWink } from '@fortawesome/free-solid-svg-icons';
+import { faSmileWink, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 import {
   faFacebookF,
@@ -27,6 +27,11 @@ export default function Home() {
         </div>
       </div>
 
+      <input type="checkbox" id="check" />
+      <label htmlFor="check" className="show-menu-btn">
+        <FontAwesomeIcon className = "homeShow-icon" icon={faBars} color="rgb(233, 147, 49)" />
+      </label>
+
       <nav>
         <ul>
           <Link to="/">
@@ -42,7 +47,13 @@ export default function Home() {
             <li>Sobre</li>
           </Link>
         </ul>
+
+        
+        <label htmlFor="check" className="hide-menu-btn">
+          <FontAwesomeIcon className = "hide-icon" icon={faTimes} color="rgb(233, 147, 49)" />
+        </label>
       </nav>
+
     </div>
       
       
