@@ -10,7 +10,6 @@
 
 .sobre {
   display: grid;
-  /* grid-template-columns: repeat(auto-fit, minmax(320px, 620px)); */
   grid-template-columns: repeat(2, 600px);
   margin-top: 8%;
   grid-gap: 1em;
@@ -77,7 +76,6 @@
   color: rgb(206, 129, 77);
   font-family: 'Raleway', sans-serif;
   text-transform: uppercase;
-  /* padding: 8px; */
   border-bottom: solid 1px rgb(248, 173, 124);
   margin-top: 10px;
   margin-bottom: 15px;
@@ -100,9 +98,11 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 800px) {
   .menu-footer nav ul li {
-    font-size: 13px;
+    font-size: 14px;
+    flex-direction: column;
+    padding: 5px;
   }
 }
 
@@ -114,7 +114,7 @@
   }
 
   .sobre .sobre-texto p {
-    padding: 12px;
+    padding: 20px;
   }
 
   .leaflet-container {
@@ -122,10 +122,10 @@
   }
 
   .mapa {
-    padding: 12px;
+    padding: 20px;
   }
 
   .sobre img {
-    padding: 12px;
+    padding: 20px;
   }
 }

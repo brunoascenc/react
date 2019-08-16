@@ -1,7 +1,6 @@
 import React from 'react';
 import './Sobre.css';
 import Nav from './Nav';
-// import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
 import Map from './Map';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

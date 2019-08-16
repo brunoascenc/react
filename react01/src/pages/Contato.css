@@ -14,7 +14,6 @@
   border: solid 1px #ccc;
   margin-top: 5px;
   margin-bottom: 7px;
-  /* width: 250px; */
 }
 
 .contato-form label {
@@ -63,12 +62,10 @@ textarea {
 
 .contato {
   display: grid;
-  /* grid-template-columns: repeat(2, 620px); */
   grid-template-columns: repeat(auto-fit, minmax(320px, 620px));
   margin-top: 6%;
   border-top: solid 1px rgb(246, 229, 191);
   padding: 3% 0 0 0;
-  /* align-items: center; */
   justify-content: center;
 }
 
@@ -121,6 +118,10 @@ textarea {
     margin-left: 0%;
   }
 
+  .contato-form select {
+    width: 50%;
+  }
+
   .contato-form form div .input-nome,
   .input-sobrenome input {
     width: 100%;
@@ -129,6 +130,6 @@ textarea {
 
 @media (max-width: 320px) {
   .contato img {
-    padding: 12px;
+    padding: 14px;
   }
 }

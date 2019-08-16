@@ -4,10 +4,11 @@
 @import url('https://fonts.googleapis.com/css?family=Graduate&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
 
-header{
+header {
   height: 100vh;
   display: grid;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('http://voopropaganda.com.br/wp-content/uploads/2018/12/foto-coxinha.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)),
+    url('http://voopropaganda.com.br/wp-content/uploads/2018/12/foto-coxinha.jpg');
   width: 100%;
   background-size: cover;
   overflow: hidden;
@@ -39,10 +40,10 @@ header img {
   text-transform: uppercase;
 }
 
-.nav-home nav a:hover{
+.nav-home nav a:hover {
   color: rgb(245, 214, 147);
   transition: all 0.2s ease-in-out;
-  transform:  translateY(-3px);
+  transform: translateY(-3px);
 }
 
 .nav-home nav ul {
@@ -51,18 +52,17 @@ header img {
 }
 
 .nav-home nav ul li {
-  padding: 0 .75em;
+  padding: 0 0.75em;
 }
 
-
-.logo-home div{
+.logo-home div {
   display: flex;
   flex-direction: column;
   align-items: center;
   color: aliceblue;
 }
 
-.logo-home a{
+.logo-home a {
   font-family: 'Dancing Script', cursive;
   text-decoration: none;
   color: aliceblue;
@@ -70,8 +70,7 @@ header img {
   font-weight: 100;
 }
 
-
-.landing-content{
+.landing-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -79,25 +78,28 @@ header img {
   background: rgb(226, 182, 87);
   width: 40%;
   border-radius: 0 12px 12px 0;
+  box-shadow: 5px 7px 4px rgba(0, 0, 0, 0.3);
+  padding: 28px;
+  justify-content: center;
+  height: 300px;
 }
-  
-.landing-content div {
+
+.landing-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 55px;
-  padding: 3%;
 }
 
-.landing-content div p {
+.landing-content p {
   font-family: 'Lexend Exa', sans-serif;
   font-weight: 100;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: rgb(248, 249, 250);
   width: 100%;
   word-wrap: break-word;
+  overflow: hidden;
 }
-
 
 .landing-content h1 {
   font-size: 2rem;
@@ -142,10 +144,9 @@ header img {
   display: flex;
   align-items: flex-end;
   padding: 10px 5%;
-
 }
 
-.home-footer  p {
+.home-footer p {
   color: white;
   font-weight: bold;
   text-transform: uppercase;
@@ -155,19 +156,8 @@ header img {
   font-weight: lighter;
 }
 
-
-/* .container {
-  display: flex;
-  justify-content: space-between;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-bottom: auto;
-  margin-top: auto;
-} */
-
-
-@media (max-width: 920px){
-  .landing-content{
+@media (max-width: 1150px) {
+  .landing-content {
     width: 60%;
   }
 }
@@ -207,10 +197,10 @@ header img {
     right: 40px;
   }
 
-  .hide-icon:hover{
+  .hide-icon:hover {
     color: rgb(250, 209, 144);
     transition: all 0.2s ease-in-out;
-    transform: rotate(90deg); 
+    transform: rotate(90deg);
   }
 
   .homeShow-icon {
@@ -227,24 +217,84 @@ header img {
     transition: all 0.2s ease-in-out;
     transform: translateY(-3px);
   }
+
+  .logo-home a {
+    font-size: 0.6rem;
+  }
 }
 
-
-@media (max-width: 530px){
-  .landing-content{
+@media (max-width: 675px) {
+  .landing-content {
     width: 80%;
+    padding: 22px;
+    height: 250px;
   }
 
-  .landing-content div p {
+  .landing-content p {
     max-width: 100%;
+    font-size: 11px;
   }
 
   .social-icons {
-    align-items: flex-start;
     margin-top: 25px;
+    padding: 5px;
   }
 
-  header{
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('http://voopropaganda.com.br/wp-content/uploads/2018/12/foto-coxinha.jpg') center;
+  .social-icons div a {
+    padding: 3px;
   }
-} 
+
+  .home-footer p {
+    font-size: 0.5rem;
+  }
+
+  .social-icons div {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (max-width: 530px) {
+  header {
+    background-position-x: 15%;
+  }
+}
+
+@media (max-width: 420px) {
+  .landing-content {
+    width: 90%;
+    padding: 22px;
+    height: 250px;
+  }
+
+  .landing-content p {
+    max-width: 100%;
+    font-size: 9px;
+  }
+
+  .social-icons {
+    margin-top: 25px;
+    font-size: 7px;
+    padding: 0;
+    align-items: center;
+  }
+
+  .social-icons div a {
+    padding: 3px;
+  }
+
+  .social-icons div a:hover {
+    transform: translateY(-5px);
+  }
+
+  .home-footer p {
+    font-size: 0.5rem;
+  }
+
+  .social-icons div {
+    display: flex;
+    align-items: center;
+    flex-direction: unset;
+    border-bottom: solid 2px rgb(250, 248, 248);
+  }
+}
