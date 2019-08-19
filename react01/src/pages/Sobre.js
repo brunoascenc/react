@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import './Sobre.css';
 import Nav from './Nav';
 import Map from './Map';
+import { TweenMax, Power3 } from 'gsap';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSmileWink } from '@fortawesome/free-solid-svg-icons';
@@ -11,12 +12,46 @@ import { Link } from 'react-router-dom';
 import lanches from '../assets/lanches.jpg';
 
 export default function Sobre() {
+  let sobreImg,
+    sobreTxt = useRef();
+
+  useEffect(() => {
+    TweenMax.fromTo(
+      sobreImg,
+      0.8,
+      {
+        opacity: 0,
+        x: 15,
+        ease: Power3.easeInOut
+      },
+      {
+        opacity: 1,
+        x: 0,
+        delay: 0.2
+      }
+    );
+    TweenMax.fromTo(
+      sobreTxt,
+      0.8,
+      {
+        opacity: 0,
+        x: -50,
+        ease: Power3.easeInOut
+      },
+      {
+        opacity: 1,
+        x: 0,
+        delay: 0.3
+      }
+    );
+  }, []);
+
   return (
     <div className="sobre-container">
       <div className="container">
         <Nav />
         <div className="sobre">
-          <div className="sobre-texto">
+          <div ref={el => {sobreTxt = el;}} className="sobre-texto">
             <h1>Sobre nós</h1>
             <span className="destaque">
               <p>
@@ -39,7 +74,7 @@ export default function Sobre() {
           </div>
 
           <div>
-            <img src={lanches} alt="Lanches" />
+            <img ref={el => {sobreImg = el;}}src={lanches}alt="Lanches"/>
           </div>
 
           <div className="mapa">

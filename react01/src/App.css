@@ -10,6 +10,10 @@ html, body, #root{
   overflow-x: hidden;
 }
 
+body {
+  background: rgb(255, 255, 255);
+}
+
 .container{
   padding-right: 5%;
   padding-left: 5%;

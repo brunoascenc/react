@@ -1,14 +1,49 @@
-import React from 'react';
+import React, {useRef, useEffect} from 'react';
 import './Contato.css';
 import Nav from './Nav';
 import { Link } from 'react-router-dom';
+
+import {TweenMax, Power3} from 'gsap'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSmileWink } from '@fortawesome/free-solid-svg-icons';
 
 import salgados from '../assets/salgados1.jpg';
-
+ 
 export default function Contato() {
+  
+  let contatoAnimation, imgAnimation = useRef()
+
+  useEffect(() => {
+    TweenMax.fromTo(
+      contatoAnimation,
+      .8,
+      {
+        opacity:0,
+        y: -55,
+        ease: Power3.easeInOut,
+      }, {
+        opacity: 1,
+        y:0,
+        delay: .4
+      }
+    )
+    TweenMax.fromTo(
+      imgAnimation,
+      .8,
+      {
+        opacity:0,
+        x: -5,
+        ease: Power3.easeInOut,
+      }, {
+        opacity: 1,
+        x:0,
+        delay: .2
+      }
+    )
+  }, [])
+
+
   return (
     <div className="contato-container">
       <div className="container">
@@ -16,10 +51,10 @@ export default function Contato() {
 
         <div className="contato">
           <div>
-            <img src={salgados} alt="Salgados" />
+            <img ref = {el => {imgAnimation = el}} src={salgados} alt="Salgados" />
           </div>
 
-          <div className="contato-form">
+          <div ref = {el => {contatoAnimation = el}} className="contato-form">
             <h2>Entre em contato</h2>
             <form>
               <div>

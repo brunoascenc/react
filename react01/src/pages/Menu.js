@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useRef, useEffect} from 'react';
 import Nav from './Nav';
 import './Menu.css';
 import { Link } from 'react-router-dom';
 
+import {TweenMax, Power3} from 'gsap'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSmileWink } from '@fortawesome/free-solid-svg-icons';
@@ -19,17 +20,64 @@ import salgados from '../assets/coxinhaswpp.jpg';
 import lanches from '../assets/cheeseburgerwpp.jpg';
 
 export default function Home() {
+
+  let bannerAnimation, textAnimation= useRef()
+
+  useEffect(() => {
+    TweenMax.fromTo(
+      bannerAnimation,
+      .8,
+      {
+        opacity:0,
+        x: -5,
+        ease: Power3.easeInOut,
+      }, {
+        opacity: 1,
+        x:0,
+        delay: .2
+      }
+    )
+    TweenMax.fromTo(
+      textAnimation,
+      .8,
+      {
+        opacity:0,
+        x: -5,
+        ease: Power3.easeInOut,
+      }, {
+        opacity: 1,
+        x:0,
+        delay: .6
+      }
+    )
+  }, [])
+
+
+
   return (
     <div className="menu-container">
       <div className="container">
         <Nav />
 
-        <div className="menu-banner">
-            <img src = {salgados} alt = "Coxinhas"/>
-  
-            <img src = {lanches} alt = "Lanches"/>
-            
-            {/* <div>
+        <div  ref = {el => {bannerAnimation = el}}  className="menu-banner">
+        
+          
+           <img src={salgados} alt="Coxinhas" />
+
+          {/* <img src={lanches} alt="Lanches" /> */}
+          <div className = "apreMenu">
+          <span className="destaque">
+              <p ref = {el => {textAnimation = el}}>
+                "Lorem Ipsum is simply dummy text of the printing and
+                typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown
+                printer took a galley of type and scrambled it to make a type
+                specimen book."
+              </p>
+            </span>
+          </div>
+
+          {/* <div>
               <h3>3</h3>
             </div>
             <div>

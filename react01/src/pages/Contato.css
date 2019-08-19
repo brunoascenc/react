@@ -11,7 +11,7 @@
 .contato-form input {
   padding: 10px;
   border-radius: 2px;
-  border: solid 1px #ccc;
+  border: solid 1px rgb(221, 216, 216);
   margin-top: 5px;
   margin-bottom: 7px;
 }
@@ -30,7 +30,7 @@
 
 .contato-form select,
 textarea {
-  border: solid 1px #ccc;
+  border: solid 1px rgb(221, 216, 216);
   border-radius: 2px;
 }
 
@@ -64,14 +64,20 @@ textarea {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 620px));
   margin-top: 6%;
-  border-top: solid 1px rgb(246, 229, 191);
+  /* border-top: solid 1px rgb(246, 229, 191); */
   padding: 3% 0 0 0;
   justify-content: center;
+  height: 70vh;
+  background: rgb(255, 255, 255);
+  box-shadow: 1px 5px 13px 1px rgba(0, 0, 0, 0.1);
+  border: solid 1px rgb(245, 244, 244);
+  margin-bottom: 35px;
 }
 
 .contato img {
   max-width: 100%;
-  border-radius: 6px;
+  max-height: 100%;
+  border-radius: 4px;
 }
 
 .contato-form form {

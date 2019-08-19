@@ -5,70 +5,66 @@ import {TweenMax, Power3} from 'gsap'
 
 import './Home.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faSmileWink,
-  faBars,
-  faTimes
-} from '@fortawesome/free-solid-svg-icons';
+import {faSmileWink, faBars, faTimes} from '@fortawesome/free-solid-svg-icons';
 
-import {
-  faFacebookF,
-  faInstagram,
-  faTwitter,
-  faYoutube
-} from '@fortawesome/free-brands-svg-icons';
+import {faFacebookF, faInstagram, faTwitter, faYoutube} from '@fortawesome/free-brands-svg-icons';
 
 export default function Home() {
 
-  let contentText = useRef()
-  let logoAnimation = useRef()
-  // let navAnimation = useRef()
-  let homeAnimation = useRef()
-  let contatoAnimation = useRef()
-  let sobreAnimation = useRef()
-  let menuAnimation = useRef()
-  let footerAnimation = useRef()
-  let socialsAnimation = useRef()
-
+  let contentText, logoAnimation, homeAnimation,
+  contatoAnimation, sobreAnimation, menuAnimation,
+  footerAnimation, socialsAnimation  = useRef()
 
   useEffect(() => {
-    TweenMax.to(
+    TweenMax.fromTo(
       homeAnimation,
       .8,
       {
-        opacity:1,
-        y: 2,
+        opacity:0,
+        y: -25,
         ease: Power3.easeInOut,
+      }, {
+        opacity: 1,
+        y:0,
         delay: .2
       }
     )
-    TweenMax.to(
+    TweenMax.fromTo(
       contatoAnimation,
       .8,
       {
-        opacity:1,
-        y: 2,
+        opacity:0,
+        y: -25,
         ease: Power3.easeInOut,
+      },{
+        opacity: 1,
+        y:0,
         delay: .4
       }
     )
-    TweenMax.to(
+    TweenMax.fromTo(
       sobreAnimation,
       .8,
       {
-        opacity:1,
-        y: 2,
+        opacity:0,
+        y: -25,
         ease: Power3.easeInOut,
+      }, {
+        y:0,
+        opacity: 1,
         delay: .5
       }
     )
-    TweenMax.to(
+    TweenMax.fromTo(
       menuAnimation,
       .8,
       {
-        opacity:1,
-        y: 2,
+        opacity:0,
+        y: -25,
         ease: Power3.easeInOut,
+      },{
+        y: 0,
+        opacity: 1,
         delay: .3
       }
     )
@@ -77,58 +73,50 @@ export default function Home() {
       .8,
       {
         opacity:1,
-        y: 2,
         ease: Power3.easeInOut,
-        delay: .1
+        delay: .2
       }
     )
-    TweenMax.to(
+    TweenMax.fromTo(
       contentText,
       .8,
       {
-        opacity:1,
-        y: -5,
+        opacity:0,
+        x: -80,
         ease: Power3.easeInOut,
-        delay: .7
+      }, {
+        delay: .7,
+        x: 0,
+        opacity: 1
       }
     )
-    TweenMax.to(
+    TweenMax.fromTo(
       footerAnimation,
-      .8,
+      .7,
       {
-        opacity:1,
-        y: -5,
+        opacity:0,
+        y: 56,
         ease: Power3.easeInOut,
+      }, {
+        y:0,
+        opacity: 1,
         delay: .7
       }
     )
-    TweenMax.to(
+    TweenMax.fromTo(
       socialsAnimation,
       .8,
       {
-        opacity:1,
-        // x: -11,
+        opacity:0,
+        x: 85,
         ease: Power3.easeInOut,
-        delay: .8
+      },{
+        x:0,
+        delay: .8,
+        opacity: 1
       }
     )
   }, [])
-
-  // const homeContainer = useRef(null)
-
-  // useEffect(() => {
-  //   TweenMax.to(
-  //     homeContainer,
-  //     .8,
-  //     {
-  //       opacity:1,
-  //       y:-20,
-  //       ease: Power3.easeOut
-  //     }
-  //   )
-  // }, [])
-
-
 
   return (
     <div className="home-container">

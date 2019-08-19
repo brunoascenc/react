@@ -92,12 +92,9 @@ header img {
   margin-top: 55px;
 }
 
-.logo-home, nav ul li, footer p, .social-icons div {
+.logo-home {
   opacity: 0;
 }
-/* nav ul li{
-  opacity: 0;
-} */
 
 .landing-content p {
   font-family: 'Lexend Exa', sans-serif;
