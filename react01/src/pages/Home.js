@@ -1,5 +1,7 @@
-import React from 'react';
+import React, {useRef, useEffect} from 'react';
 import { Link } from 'react-router-dom';
+
+import {TweenMax, Power3} from 'gsap'
 
 import './Home.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -17,11 +19,122 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 export default function Home() {
+
+  let contentText = useRef()
+  let logoAnimation = useRef()
+  // let navAnimation = useRef()
+  let homeAnimation = useRef()
+  let contatoAnimation = useRef()
+  let sobreAnimation = useRef()
+  let menuAnimation = useRef()
+  let footerAnimation = useRef()
+  let socialsAnimation = useRef()
+
+
+  useEffect(() => {
+    TweenMax.to(
+      homeAnimation,
+      .8,
+      {
+        opacity:1,
+        y: 2,
+        ease: Power3.easeInOut,
+        delay: .2
+      }
+    )
+    TweenMax.to(
+      contatoAnimation,
+      .8,
+      {
+        opacity:1,
+        y: 2,
+        ease: Power3.easeInOut,
+        delay: .4
+      }
+    )
+    TweenMax.to(
+      sobreAnimation,
+      .8,
+      {
+        opacity:1,
+        y: 2,
+        ease: Power3.easeInOut,
+        delay: .5
+      }
+    )
+    TweenMax.to(
+      menuAnimation,
+      .8,
+      {
+        opacity:1,
+        y: 2,
+        ease: Power3.easeInOut,
+        delay: .3
+      }
+    )
+    TweenMax.to(
+      logoAnimation,
+      .8,
+      {
+        opacity:1,
+        y: 2,
+        ease: Power3.easeInOut,
+        delay: .1
+      }
+    )
+    TweenMax.to(
+      contentText,
+      .8,
+      {
+        opacity:1,
+        y: -5,
+        ease: Power3.easeInOut,
+        delay: .7
+      }
+    )
+    TweenMax.to(
+      footerAnimation,
+      .8,
+      {
+        opacity:1,
+        y: -5,
+        ease: Power3.easeInOut,
+        delay: .7
+      }
+    )
+    TweenMax.to(
+      socialsAnimation,
+      .8,
+      {
+        opacity:1,
+        // x: -11,
+        ease: Power3.easeInOut,
+        delay: .8
+      }
+    )
+  }, [])
+
+  // const homeContainer = useRef(null)
+
+  // useEffect(() => {
+  //   TweenMax.to(
+  //     homeContainer,
+  //     .8,
+  //     {
+  //       opacity:1,
+  //       y:-20,
+  //       ease: Power3.easeOut
+  //     }
+  //   )
+  // }, [])
+
+
+
   return (
     <div className="home-container">
       <header className="landing-page">
         <div className="nav-home">
-          <div className="logo-home">
+          <div ref = {el => {logoAnimation = el}} className="logo-home">
             <div>
               <FontAwesomeIcon icon={faSmileWink} />
               <Link to="/">
@@ -42,16 +155,16 @@ export default function Home() {
           <nav>
             <ul>
               <Link to="/">
-                <li>Home</li>
+                <li ref = {el => {homeAnimation = el}}>Home</li>
               </Link>
               <Link to="/menu">
-                <li>Menu</li>
+                <li ref = {el => {menuAnimation = el}}>Menu</li>
               </Link>
               <Link to="/contato">
-                <li>Contato</li>
+                <li ref = {el => {contatoAnimation = el}}>Contato</li>
               </Link>
               <Link to="/sobre">
-                <li>Sobre</li>
+                <li ref = {el => {sobreAnimation = el}}>Sobre</li>
               </Link>
             </ul>
 
@@ -65,7 +178,7 @@ export default function Home() {
           </nav>
         </div>
 
-        <div className="landing-content">
+        <div ref = {el => {contentText = el}} className="landing-content">
           <p>
             "Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
@@ -80,7 +193,7 @@ export default function Home() {
         </div>
 
         <div className="social-icons">
-          <div>
+          <div ref = {el => {socialsAnimation = el}}>
             <a href="http://facebook.com">
               <FontAwesomeIcon icon={faFacebookF} size="2x" />
             </a>
@@ -97,7 +210,7 @@ export default function Home() {
         </div>
 
         <footer className="home-footer">
-          <p>AV. Paulista, São Paulo - SP, 101</p>
+          <p ref = {el => {footerAnimation = el}}>AV. Paulista, São Paulo - SP, 101</p>
         </footer>
       </header>
     </div>

@@ -77,11 +77,12 @@ header img {
   color: rgb(244, 246, 248);
   background: rgb(226, 182, 87);
   width: 40%;
-  border-radius: 0 12px 12px 0;
+  border-radius: 0 4% 4% 0;
   box-shadow: 5px 7px 4px rgba(0, 0, 0, 0.3);
   padding: 28px;
   justify-content: center;
-  height: 300px;
+  height: 85%;
+  opacity: 0;
 }
 
 .landing-content {
@@ -90,6 +91,13 @@ header img {
   align-items: center;
   margin-top: 55px;
 }
+
+.logo-home, nav ul li, footer p, .social-icons div {
+  opacity: 0;
+}
+/* nav ul li{
+  opacity: 0;
+} */
 
 .landing-content p {
   font-family: 'Lexend Exa', sans-serif;
