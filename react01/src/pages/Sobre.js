@@ -21,7 +21,7 @@ export default function Sobre() {
       0.8,
       {
         opacity: 0,
-        x: 15,
+        x: 30,
         ease: Power3.easeInOut
       },
       {

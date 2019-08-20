@@ -32,30 +32,24 @@ h2 {
 
 .menu-banner {
   width: 100%;
-  height: 430px;
+  height: 45vh;
   margin-top: 4%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* border-top: solid 1px rgb(253, 233, 190); */
-
-  /* background: url('https://portal-amb-imgs.clubedaana.com.br/2019/04/coxinha-de-frango-da-palmirinha-1920x1080.jpg') no-repeat;
-  background-size: 50%; */
   background: white;
-  box-shadow: 1px 5px 13px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 9px 13px 1px rgba(0, 0, 0, 0.1);
   border: solid 1px rgb(245, 244, 244);
 }
 
 .menu-banner img {
   max-width: 100%;
-  max-height: 100%;
-  /* margin-right: 500px; */
+  height: 100%;
 }
 
 .apreMenu {
   display: flex;
   align-items: center;
-  /* width: 10px; */
 }
 
 .apreMenu .destaque p {
@@ -64,7 +58,6 @@ h2 {
   font-weight: bold;
   font-size: 1.3rem;
   margin-bottom: 25px;
-  /* width: 80%; */
   text-align: center;
   letter-spacing: 0;
   padding: 16px;
@@ -73,12 +66,7 @@ h2 {
 .menu {
   display: flex;
   justify-content: center;
-  background: #ffff;
-  /* box-shadow: 0px 30px 15px -10px rgba(63, 62, 62, 0.1); */
   margin-bottom: 20px;
-  border: solid 1px rgb(243, 240, 240);
-  box-shadow: 15px 20px 25px -20px rgba(167, 166, 166, 0.5);
-  box-shadow: 0 5px 15px rgba(95, 95, 95, 0.1);
 }
 
 .menu img {
@@ -145,9 +133,23 @@ h2 {
 }
 
 @media (max-width: 1390px) {
+  .menu-banner img {
+    max-width: 70%;
+  }
+}
+
+@media (max-width: 1280px){
   .menu-banner {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    flex-direction: column;
+  }
+  .menu-banner img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .menu-banner {
+    height: 100%;
+    padding: 18px;
   }
 }
 
@@ -172,10 +174,26 @@ h2 {
   .descricao {
     width: 100%;
   }
+
+  .menu-banner .apreMenu .destaque p {
+    font-size: 1rem;
+    padding: 26px;
+  }
+
+  .menu-banner img {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 900px) {
   .menu {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 410px){
+  .menu-banner .apreMenu .destaque p{
+    padding: 10px;
+    font-size: 0.8rem;
   }
 }

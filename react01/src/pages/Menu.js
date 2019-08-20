@@ -64,7 +64,6 @@ export default function Home() {
           
            <img src={salgados} alt="Coxinhas" />
 
-          {/* <img src={lanches} alt="Lanches" /> */}
           <div className = "apreMenu">
           <span className="destaque">
               <p ref = {el => {textAnimation = el}}>
